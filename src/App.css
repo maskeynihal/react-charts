@@ -1,0 +1,22 @@
+body {
+  background-color: #0f0f0f;
+}
+
+.App {
+  text-align: center;
+  color: #fefefe;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-version {
+  position: fixed;
+  right: 1rem;
+  font-size: 12px;
+}
