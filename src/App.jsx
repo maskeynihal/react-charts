@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 
-import "./App.css";
-import config from "./config";
+import './App.css';
+import StackedBarChart from './components/common/charts/StackedBarChart';
+import config from './config';
 
 const App = (props) => {
-  const [time, setTime] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setTimeout(() => setTime(new Date()), 1000);
-
-    return () => clearTimeout(timer);
-  }, [time]);
+  const handleOnClick = (e) => {
+    console.log(e.target);
+  };
 
   return (
     <div className="App">
       <div className="app-version">App Version: {config.appVersion}</div>
       <div className="App-header">
-        <h1>Time:</h1>
-        <h2>{time.toLocaleTimeString()}</h2>
+        <StackedBarChart
+          height="100"
+          width="100"
+          id="stackedBarChart"
+          onClick={handleOnClick}
+        />
       </div>
     </div>
   );

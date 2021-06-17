@@ -1,8 +1,8 @@
 body {
-  background-color: #0f0f0f;
+  /* background-color: #0f0f0f; */
 }
 
-.App {
+/* .App {
   text-align: center;
   color: #fefefe;
 }
@@ -19,4 +19,10 @@ body {
   position: fixed;
   right: 1rem;
   font-size: 12px;
+} */
+
+.App-header {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
 }
