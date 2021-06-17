@@ -4,12 +4,6 @@ import { createPortal } from 'react-dom';
 const Tooltip = (props) => {
   const { position, data } = props;
 
-  useEffect(() => {
-    console.log(data);
-
-    return () => console.log('removed');
-  }, []);
-
   return createPortal(
     <div
       id="barchart"
